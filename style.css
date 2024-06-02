@@ -1,0 +1,136 @@
+body {
+    background-color: #252525;
+    font-family: "Rubik", sans-serif;
+    color: #d7d7d7;
+}
+
+p {
+    margin-top: 60px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+textarea {
+    display: block;
+    background-color: #252525;
+    color: #d7d7d7;
+}
+
+.fields {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    margin-top: 200px;
+}
+
+.fields textarea {
+    width: 400px;
+    height: 200px;
+    border: 3px solid #8cd1d0;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.fields textarea:nth-child(1) {
+    border: 3px solid #bc5145;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 750px;
+    margin:auto;
+    margin-top: 60px;
+}
+.switch {
+ display: block;
+ height: 80px;
+ background-image: url("img_baZa.png");
+background-repeat:no-repeat;
+background-position: center;
+background-size: contain;
+cursor:pointer;
+transition: all 0.2s ease;
+}
+input { 
+    display: block;
+    height: 50px;
+    background-color: #252525;
+    border: 3px solid #bc5145;
+    border-radius: 10px;
+    padding: 6px;
+    color: #d7d7d7;
+    
+}
+button { 
+    display: block;
+    height: 50px;
+    background-color: #252525;
+    border: 3px solid #8cd1d0;
+    border-radius: 10px;
+    padding: 6px;
+    color: #d7d7d7;
+    cursor:pointer  ;
+}
+button[disabled] {
+    opacity: 0.5;
+}
+button.reverse {
+    border: 3px solid #bc5145;
+}
+.fields textarea.reverse {
+    border: 3px solid #bc5145;
+}
+
+.fields textarea.reverse:nth-child(1) {
+    border: 3px solid #8cd1d0;; 
+}
+input.reverse {
+    border: 3px solid #8cd1d0;; 
+}
+.switch:hover {
+    transform: scale(1.1);
+
+}
+.switch:active {
+    transform: scale(0.9);
+}
+.fields textarea:nth-child(1):focus {
+    border: 3px solid #833930;; 
+}.fields textarea.reverse:nth-child(1):focus {
+    border: 3px solid #548887;; 
+}
+.fields textarea:focus {
+    border: 3px solid #548887;
+}.fields textarea.reverse:focus {
+    border: 3px solid #833930;
+}
+input:focus {
+    border: 3px solid #833930;; 
+}input.reverse:focus {
+    border: 3px solid #548887;; 
+}
+@media screen and (max-width: 600px) {
+    .buttons {
+       
+        grid-template-columns: 1fr ;
+        grid-template-rows: 50px 80px 50px;
+        gap: 20px;
+        width: 100%;
+       
+    } 
+    .fields {
+        flex-direction: column;
+        margin-top: 50px;
+        gap: 30px;
+    }
+    .fields textarea {
+        width: 100%;
+    }
+}
